@@ -12,7 +12,6 @@ import java.util.List;
 public class MainController {
 
     @GetMapping("/print-numbers")
-    @ResponseBody
     public String printNumbers(Model model, @RequestParam int n) {
 
         List<Integer> list = new ArrayList<>();
@@ -21,8 +20,8 @@ public class MainController {
             list.add(i);
         }
 
-        model.addAttribute("printNumbers", list);
+        model.addAttribute("printNumbers1", list);
 
-        return "index";
+        return "printNumbers";
     }
 }
